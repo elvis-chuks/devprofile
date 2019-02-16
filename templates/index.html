@@ -21,15 +21,15 @@
   <!-- Start your project here-->
  <header>
 <!--Navbar-->
-<nav class="navbar navbar-expand-lg navbar-dark white fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark primary-color fixed-top">
 
   <div class="container">
 
     <!-- Navbar brand -->
-    <a class="navbar-brand font-weight-bold blue-text" href="#">Elvis-Presley Chuks</a>
+    <a class="navbar-brand font-weight-bold white-text" href="#">Elvis-Presley Chuks</a>
 
     <!-- Collapse button -->
-    <button class="navbar-toggler blue" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
       aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -40,15 +40,15 @@
       <!-- Links -->
       <ul class="navbar-nav ml-auto ">
         <li class="nav-item active">
-          <a class="nav-link blue-text" href="#">Home
+          <a class="nav-link white-text" href="#">Home
             <span class="sr-only">(current)</span>
           </a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link blue-text" data-toggle="tab" href="#panel56" role="tab">Projects</a>
+          <a class="nav-link white-text" data-toggle="tab" href="#projects" role="tab">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link blue-text" href="#">Social Media</a>
+          <a class="nav-link white-text" href="#social">Social Media</a>
         </li>
 
         <!-- Dropdown -->
@@ -83,7 +83,7 @@
 
                     <!-- Description -->
                     <h4 class="white-text my-4"><strong>Lagos </strong>based software and web developer ...........</h4>
-                    <button type="button" class="btn btn-outline-white">Projects<i class="fas fa-project-diagram ml-2"></i></button>
+                    <a href="#projects"><button type="button" class="btn btn-outline-white">Projects<i class="fas fa-project-diagram ml-2"></i></button></a>
                     <button type="button" class="btn btn-outline-white">Contact Me<i class="fas fa-address-book ml-2"></i></button>
 
                 </div>
@@ -98,7 +98,7 @@
 <!--/.Mask-->
 </header>
   <!-- /Start your project here-->
-<main>
+<main id="projects">
   
 <div class="container">
   <div class="row">
@@ -140,10 +140,37 @@ we’ve got you covered.</p>
     </div>
   </div>
 </div>
+
+
+<div class="container unique-color-dark" id="contact">
+  <div class="row">
+    <div class="col-sm col-sm-6">
+      <section class="my-5">
+        <p class="white-text">&nbsp &nbsp<i class="fa fa-map-marker-alt"></i><label for="inputEmail4MD"> &nbsp &nbsp Location</label></p>
+      </section>
+      
+    </div>
+    <div class="col-sm col-sm-6">
+      <section class="my-5">
+        <form class="">
+          <div class="md-form form-group mt-5">
+            <i class="fas fa-envelope prefix"></i>
+          <input type="email"  id="form1" class="form-control white-text" name="email" placeholder="Please enter your email">
+        </div>
+        <div class="md-form form-lg form-group mt-5">
+          <textarea name="comment" class="form-control white "></textarea>
+        </div>
+          <button type="submit" class="btn btn-outline-white form-group  " >Submit &nbsp<i class="far fa-paper-plane"></i></button>
+        </form>
+      </section>
+    </div>
+  </div>
+</div>
+
 </main>
 
 <!--Footer-->
-<footer class="page-footer unique-color-dark">
+<footer class="page-footer unique-color-dark" id="social">
 
     <!-- Social buttons -->
     <div class="primary-color">
@@ -199,6 +226,43 @@ we’ve got you covered.</p>
   <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="/static/js/mdb.js"></script>
+
+  <script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
 </body>
 
 </html>
