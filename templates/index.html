@@ -76,15 +76,15 @@
                 <div class="col-md-10">
 
                     <!-- Heading -->
-                    <h2 class="display-4 font-weight-bold white-text pt-5 mb-2">Web developer</h2>
+                    <h2 class="display-7 font-weight-bold white-text pt-5 mb-2">I'm Elvis Chuks</h2>
 
                     <!-- Divider -->
                     <hr class="hr-light">
 
                     <!-- Description -->
-                    <h4 class="white-text my-4"><strong>Lagos </strong>based software and web developer ...........</h4>
+                    <h4 class="white-text my-3">A      <strong>web developer </strong>  based in Lagos, Nigeria ............</h4>
                     <a href="#projects"><button type="button" class="btn btn-outline-white">Projects<i class="fas fa-project-diagram ml-2"></i></button></a>
-                    <button type="button" class="btn btn-outline-white">Contact Me<i class="fas fa-address-book ml-2"></i></button>
+                    <a href="#contact"><button type="button" class="btn btn-outline-white">Contact Me<i class="fas fa-address-book ml-2"></i></button></a>
 
                 </div>
 
@@ -99,26 +99,46 @@
 </header>
   <!-- /Start your project here-->
 <main id="projects">
-  
+  <div class="container z-depth-2 rounded" style="margin-top:20px; ">
+  <div class="container">
+  <div class="row">
+    <div class="col-sm col-sm-6">
+<section class="my-5">
+  <h2 class="h4-responsive text-md-left my-5 black-text lead">I <strong class="font-weight-bold">design and build</strong> web applications. I currently work as a lead developer at Lucem</h2>
+ 
+</section>
+</div>
+   <div class="col-sm col-sm-6 text-md-right ">
+<section class="my-5">
+  <span><i class="fa fa-project-diagram"></i></span>
+ 
+</section>
+
+  </div>
+
+</div>
+</div>
 <div class="container">
   <div class="row">
     <div class="col-sm col-sm-6">
 <section class="my-5">
-  <img src="/static/img/applee.png" class="img-fluid">
+  <!-- Section heading -->
+  <h2 class="h2-responsive font-weight-bold text-center my-5 black-text">App.ly</h2>
+  <!-- Section description -->
+  <p class="lead grey-text  w-responsive  mx-auto mb-8 h6">I worked with <mark>Akinlabi Tope</mark> to build App-Lee, a software as a service (saas) that enables users convert their websites, blogs or web application into offline first cross platform applications, it currently supports IOS and Android. </p>
+<a href="http://app-lee-app-lee.1d35.starter-us-east-1.openshiftapps.com" class=""><button type="button" class="btn btn-outline-blue mx-auto" >View project<i class="fas fa-project-diagram ml-2"></i></button></a>
+  
 </section>
     </div>
     <div class="col-sm col-sm-6">
       <section class="my-5">
 
-  <!-- Section heading -->
-  <h2 class="h1-responsive font-weight-bold text-center my-5 blue-text">App.ly</h2>
-  <!-- Section description -->
-  <p class="lead grey-text text-center w-responsive mx-auto mb-5">App-Lee is a software as a service (saas) that enables users convert their website/blog or web application into cross platform applications, it currently supports IOS, Android, Windows and linux. With less than a fraction of developer costs App-Lee bridges the gap between you and your audience</p>
-<a href="http://app-lee-app-lee.1d35.starter-us-east-1.openshiftapps.com"><button type="button" class="btn btn-outline-blue " >View project<i class="fas fa-project-diagram ml-2"></i></button></a>
+  <img src="/static/img/Macbook1.svg" class="img-fluid">
   </section>
     </div>
   </div>
 </div>
+<hr class="hr-strong">
 <div class="container">
   <div class="row">
     <div class="col-sm col-sm-6">
@@ -141,27 +161,51 @@ we’ve got you covered.</p>
   </div>
 </div>
 
-
-<div class="container unique-color-dark" id="contact">
+</div>
+<div class="container " id="contact">
   <div class="row">
-    <div class="col-sm col-sm-6">
+    
+    <div class="col-sm col-sm-12">
       <section class="my-5">
-        <p class="white-text">&nbsp &nbsp<i class="fa fa-map-marker-alt"></i><label for="inputEmail4MD"> &nbsp &nbsp Location</label></p>
-      </section>
-      
-    </div>
-    <div class="col-sm col-sm-6">
-      <section class="my-5">
-        <form class="">
-          <div class="md-form form-group mt-5">
-            <i class="fas fa-envelope prefix"></i>
-          <input type="email"  id="form1" class="form-control white-text" name="email" placeholder="Please enter your email">
-        </div>
-        <div class="md-form form-lg form-group mt-5">
-          <textarea name="comment" class="form-control white "></textarea>
-        </div>
-          <button type="submit" class="btn btn-outline-white form-group  " >Submit &nbsp<i class="far fa-paper-plane"></i></button>
+        <div class="card rainy-ashville-gradient">
+
+    <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Contact us</strong>
+    </h5>
+
+    <div class="card-body px-lg-5 pt-0">
+
+        <form class="md-form" method="POST" action="/contact">
+
+
+            <i class="far fa-envelope prefix"></i>
+            <input type="email" name="email" class="form-control mb-4" placeholder="Your@email.com">
+            
+            <label for="dis" style="margin-top: 35px;"><strong>To</strong></label>
+            <input type="email" id="dis" class="form-control mb-4 "placeholder="Elvis Chuks" disabled>
+            
+
+            <div>
+                <select class="browser-default custom-select mb-4" id="materialSelect" name="subject">
+                    <option value="" disabled selected>Subject</option>
+                    <option value="I would like you to work with us">I would like you to work with us</option>
+                    <option value="Come speak at our event">Come speak at our event</option>
+                    <option value="Other">Other</option>
+                </select>
+                
+            </div>
+
+            <textarea type="text" id="materialContactFormMessage" class="form-control md-textarea" rows="3" name="comment"></textarea>
+            
+
+           
+
+
+            <button class="btn btn-outline-info" type="submit">Email me</button>
+
         </form>
+    </div>
+</div>
       </section>
     </div>
   </div>
@@ -230,7 +274,7 @@ we’ve got you covered.</p>
   <script>
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+  $(".navbar a,.view a, footer a[href='#myPage']").on('click', function(event) {
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
       // Prevent default anchor click behavior
