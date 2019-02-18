@@ -26,7 +26,7 @@ def contact():
         from email.mime.text import MIMEText
         fromaddr = request.form['email']
 
-        toaddr = "celvischuks@gmail.com"
+        toaddr = "<your email>"
         msg = MIMEMultipart()
         msg['From'] = fromaddr
         msg['To'] = toaddr
@@ -37,7 +37,7 @@ def contact():
                 <html>
                 <head></head>
                 <body>
-                <h2>Hello elvis</h2>
+                <h2>Hello there</h2>
                 <p>i have reached you, please respond</p>
                    </body>
                    </html>
@@ -51,7 +51,7 @@ def contact():
         s = smtplib.SMTP('smtp.gmail.com', 587)
         s.ehlo()
         s.starttls()
-        s.login(toaddr, "@123elvischuks")
+        s.login(toaddr, "<email password")
         text = msg.as_string()
         s.sendmail(fromaddr, toaddr, text)
         s.quit()
